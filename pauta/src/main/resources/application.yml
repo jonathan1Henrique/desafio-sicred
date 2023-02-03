@@ -1,0 +1,31 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 7235
+    url: jdbc:postgresql://localhost:5432/agenda
+    platform: org.hibernate.dialect.PostgreSQLDialect
+
+topic:
+  voto: VOTO_PAUTA
+
+
+url:
+  cpf: "https://user-info.herokuapp.com/users"
+
+server:
+  port : 8080
+
+
